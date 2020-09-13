@@ -28,6 +28,7 @@ const routes = [
         name: "Snippet",
         components: {
             'content': Snippet
+        }
     },
     {
         path: "/add-donation",
