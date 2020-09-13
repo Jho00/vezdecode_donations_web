@@ -1,14 +1,24 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Donations from '../views/Donations'
+import DonationType from "../views/DonationType"
 
 Vue.use(VueRouter)
 
 const routes = [
     {
         path: '/',
-        name: 'Home',
-        component: Home
+        name: 'Donations',
+        components: {
+            'content': Donations
+        }
+    },
+    {
+        path: "/donation-type",
+        name: "DonationType",
+        components: {
+            'content': DonationType
+        }
     }
 ]
 
