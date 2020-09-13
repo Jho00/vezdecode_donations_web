@@ -1,0 +1,19 @@
+@font-face {
+    font-family: "SFProText-Medium";
+    src: url('./SFProText-Medium.ttf');
+}
+
+@font-face {
+    font-family: "SFProText-Regular";
+    src: url('./SFProText-Regular.ttf');
+}
+
+@font-face {
+    font-family: "SFProText-Semibold";
+    src: url('./SFProText-Semibold.ttf');
+}
+
+@font-face {
+    font-family: "TTCommons-DemiBold";
+    src: url('./TTCommons-DemiBold.ttf');
+}
