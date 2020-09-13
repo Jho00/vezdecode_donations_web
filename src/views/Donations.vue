@@ -6,10 +6,10 @@
                     You have no fees yet. <br />
                     Start a good deed.
                 </div>
-                <CommonButton
+                <Button
                     title="Create donation"
                     @click.native="goToNext"
-                ></CommonButton>
+                ></Button>
             </div>
         </div>
     </div>
@@ -17,14 +17,14 @@
 
 <script>
     import eventBus from "./../eventBus"
-    import CommonButton from "./../components/CommonButton"
+    import Button from "./../components/common/CommonButton"
 
     export default {
         created() {
             eventBus.setPageTitle("Donations")
         },
         components: {
-            CommonButton
+            Button
         },
         methods: {
             goToNext() {

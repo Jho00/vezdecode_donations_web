@@ -1,7 +1,7 @@
 <template>
-    <span>
+    <div class="button text-center my-2">
         {{ title }}
-    </span>
+    </div>
 </template>
 <script>
     export default {
@@ -9,7 +9,7 @@
     }
 </script>
 <style scoped>
-    span {
+    .button {
         font-family: "SFProText-Medium";
         color: white;
         background: #4986cc;
