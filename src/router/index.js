@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Donations from '../views/Donations'
 import DonationType from "../views/DonationType"
+import Snippet from "../views/Snippet"
 
 Vue.use(VueRouter)
 
@@ -18,6 +19,13 @@ const routes = [
         name: "DonationType",
         components: {
             'content': DonationType
+        }
+    },
+    {
+        path: "/snippet",
+        name: "Snippet",
+        components: {
+            'content': Snippet
         }
     }
 ]
