@@ -6,7 +6,10 @@
                     You have no fees yet. <br />
                     Start a good deed.
                 </div>
-                <CommonButton title="Create donation" @click.native="goToNext"></CommonButton>
+                <CommonButton
+                    title="Create donation"
+                    @click.native="goToNext"
+                ></CommonButton>
             </div>
         </div>
     </div>
@@ -25,8 +28,7 @@
         },
         methods: {
             goToNext() {
-                console.log("tapped")
-                this.$router.push({name: 'DonationType'})
+                this.$router.push({ name: 'DonationType' })
             }
         }
     }

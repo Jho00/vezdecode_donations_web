@@ -1,10 +1,18 @@
 <template>
-    <div class="container h-100 text-center">
-        <div class="row h-100 justify-content-center align-items-center">
-            <div class="col-10">
-                <DonationTypeView></DonationTypeView>
-            </div>
-        </div>
+    <div class="h-100 p-3">
+        <!-- why imagePath is not working? -->
+        <DonationTypeView
+            imagePath="../assets/images/target.png"
+            title="Target donation"
+            subtitle="When there is a specific goal"
+            class="mb-2"
+        ></DonationTypeView>
+
+        <DonationTypeView
+            imagePath="../assets/images/calendar.png"
+            title="Regular donation"
+            subtitle="If you need help every month"
+        ></DonationTypeView>
     </div>
 </template>
 <script>

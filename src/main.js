@@ -2,7 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-import "./assets/fonts/fonts.css"
+import "./assets/styles/fonts/fonts.css"
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
