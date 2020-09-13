@@ -1,9 +1,15 @@
 <template>
-    <div class="w-100">
-        <div class="header-text text-center">Donations</div>
+    <div class="w-100 px-3 py-2">
+        <div class="header-text text-center">{{ title }}</div>
         <div class="black-line w-100"></div>
     </div>
 </template>
+
+<script>
+    export default {
+        props: { title: String }
+    }
+</script>
 
 <style scoped>
     .header-text {
