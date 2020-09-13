@@ -1,7 +1,7 @@
 <template>
-    <div class="snippet-body" :style="{background: `url(${imgPath}) center`}">
+    <div class="snippet-body" :style="{background: `url(${donationModel.imgPath}`, backgroundSize: 'contain'}">
         <div class="snippet-info">
-            <snippet-title :title="donationModel.title" :sub-title="donationModel.subTitle"/>
+            <snippet-title :title="donationModel.title" :sub-title="`${donationModel.author}: ${donationModel.subTitle}`"/>
             <hr>
             <snippet-progress :donation-model="donationModel"/>
         </div>
@@ -15,19 +15,9 @@
     export default {
         name: "SnippetBody",
         props: {
-            imgPath: {
-                type: String,
-                default: 'https://cdnuploads.aa.com.tr/uploads/Contents/2020/05/14/thumbs_b_c_88bedbc66bb57f0e884555e8250ae5f9.jpg?v=140708'
-            },
             donationModel: {
                 type: Object,
-                default: () => ({
-                    title: "Добряши помогают котикам",
-                    subTitle: "Михаил Павлович - Помощь нужна каждый день",
-                    donationAll: 10000,
-                    donationReal: 8750,
-                    progressTitle: 'В сентябре собрано: '
-                })
+                required: true
             }
         },
         components: {

@@ -55,8 +55,9 @@
 .post-footer {
     width: 100%;
     display: flex;
+    justify-content: center;
     box-sizing: border-box;
-    padding: 12px;
+    padding: 0px 12px;
 }
 
 .post-footer .counter {

@@ -2,9 +2,9 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Donations from '../views/Donations'
 import DonationType from "../views/DonationType"
-import Snippet from "../views/Snippet"
+import Feed from "../views/Feed"
 import AddDonation from "../views/AddDonation"
-
+import Donation from "../views/Donation";
 
 Vue.use(VueRouter)
 
@@ -24,10 +24,10 @@ const routes = [
         }
     },
     {
-        path: "/snippet",
-        name: "Snippet",
+        path: "/feed",
+        name: "Feed",
         components: {
-            'content': Snippet
+            'content': Feed
         }
     },
     {
@@ -35,6 +35,13 @@ const routes = [
         name: "AddDonation",
         components: {
             'content': AddDonation
+        }
+    },
+    {
+        path: "/donation/:id",
+        name: "Donation",
+        components: {
+            'content': Donation
         }
     }
 ]

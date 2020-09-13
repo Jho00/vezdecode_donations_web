@@ -4,7 +4,7 @@
                 :title="`${donationModel.progressTitle} ${donationModel.donationReal}`"
                 :percentage="progressPercentage"
                 class="vk-progress"/>
-        <vk-button class="help-btn" text="Помочь"/>
+        <vk-button class="help-btn" text="Помочь" @click.native="handleHelpClick"/>
     </div>
 </template>
 
@@ -26,6 +26,11 @@
         computed: {
             progressPercentage() {
                 return (this.donationModel.donationReal * 100) / this.donationModel.donationAll
+            }
+        },
+        methods: {
+            handleHelpClick() {
+                this.$router.push(`/donation/${this.donationModel.id}`)
             }
         }
     }

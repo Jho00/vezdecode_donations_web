@@ -1,7 +1,9 @@
 <template>
-    <vk-post>
-        <snippet-body></snippet-body>
-    </vk-post>
+    <div>
+        <vk-post v-for="sn in snippets" :key="sn.id">
+            <snippet-body :donation-model="sn"></snippet-body>
+        </vk-post>
+    </div>
 </template>
 
 <script>
@@ -10,12 +12,17 @@
     import SnippetBody from "../components/snippet/SnippetBody";
 
     export default {
-        name: "Snippet",
+        name: "Feed",
         components: {
             VkPost, SnippetBody
         },
         created() {
             eventBus.setPageTitle("Donation type")
+        },
+        computed: {
+            snippets() {
+                return this.$store.state.donations;
+            }
         }
     }
 </script>
