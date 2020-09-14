@@ -10,7 +10,7 @@ Vue.use(VueRouter)
 
 const routes = [
     {
-        path: '/',
+        path: '/donations',
         name: 'Donations',
         components: {
             'content': Donations
@@ -43,6 +43,10 @@ const routes = [
         components: {
             'content': Donation
         }
+    },
+    {
+        path: '*',
+        redirect: { name: 'Feed' }
     }
 ]
 

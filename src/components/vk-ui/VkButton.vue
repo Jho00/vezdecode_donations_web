@@ -30,6 +30,8 @@
     color:  #3F8AE0;
 
     transition: .3s all;
+    font-family: "SFProText-Medium";
+    font-size: 14px;
 }
 
 .vk-button:active {
