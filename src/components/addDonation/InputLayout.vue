@@ -1,13 +1,26 @@
 <template>
     <div class="my-3">
         <div class="text-muted input-title mb-1">{{ title }}</div>
-        <input type="text" :placeholder="placeholder" :value="value">
+        <input
+            :type="type"
+            :placeholder="placeholder"
+            :value="value"
+            @input="$emit('input', $event.target.value)"
+        />
     </div>
 </template>
 
 <script>
     export default {
-        props: { title: String, placeholder: String, value: String }
+        props: {
+            title: String,
+            placeholder: String,
+            value: String,
+            type: {
+                type: String,
+                default: "text"
+            }
+        }
     }
 </script>
 

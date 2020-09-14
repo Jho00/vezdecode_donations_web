@@ -24,6 +24,7 @@
         },
         created() {
             eventBus.setPageTitle("News")
+            this.$store.dispatch("fetchDonations")
         },
         computed: {
             snippets() {
