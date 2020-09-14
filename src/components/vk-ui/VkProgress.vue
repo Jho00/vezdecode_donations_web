@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="progress-view">
         <div class="title mb-1">{{ title }}</div>
         <div
             class="progress"
@@ -15,7 +15,7 @@
                     isBig ? 'big' : 'small'
                 }`"
             >
-                <span v-if="isBig" class="real">{{ real }} / {{ all }}</span>
+                <span v-if="isBig" class="real">{{ real }}₽ / {{ all }}₽</span>
             </div>
         </div>
     </div>
@@ -54,11 +54,11 @@
     }
     .progress {
         width: 100%;
-        border-radius: 2px;
+        border-radius: 6px;
     }
     .progress-real {
         height: 100%;
-        border-radius: 2px;
+        border-radius: 6px;
 
         transition: 0.3s all;
     }
