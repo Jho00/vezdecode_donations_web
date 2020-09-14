@@ -1,8 +1,8 @@
 <template>
-   <div>
-       <h6>{{title}}</h6>
-       <p>{{subTitle}}</p>
-   </div>
+    <div>
+        <div>{{ title }}</div>
+        <p class="text-muted">{{ subTitle }}</p>
+    </div>
 </template>
 
 <script>
@@ -20,5 +20,13 @@
 </script>
 
 <style scoped>
+    div {
+        font-family: "SFProText-Semibold";
+        font-size: 15px;
+    }
 
+    p {
+        font-family: "SFProText-Regular";
+        font-size: 13px;
+    }
 </style>

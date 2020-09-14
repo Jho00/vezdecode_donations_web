@@ -17,7 +17,7 @@
             VkPost, SnippetBody
         },
         created() {
-            eventBus.setPageTitle("Donation type")
+            eventBus.setPageTitle("News")
         },
         computed: {
             snippets() {

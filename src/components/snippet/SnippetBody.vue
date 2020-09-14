@@ -1,5 +1,5 @@
 <template>
-    <div class="snippet-body" :style="{background: `url(${donationModel.imgPath}`, backgroundSize: 'contain'}">
+    <div class="snippet-body mx-2" :style="{background: `url(${donationModel.imgPath}`, backgroundSize: 'contain'}">
         <div class="snippet-info">
             <snippet-title :title="donationModel.title" :sub-title="`${donationModel.author}: ${donationModel.subTitle}`"/>
             <hr>
