@@ -52,6 +52,7 @@
             onFileChange(e) {
                 const file = e.target.files[0];
                 this.imagePath = URL.createObjectURL(file);
+                this.$emit("imageChanged", file)
             }
         }
     }

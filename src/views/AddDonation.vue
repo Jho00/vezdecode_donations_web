@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <DonationCover></DonationCover>
+        <DonationCover @imageChanged="setImage"></DonationCover>
 
         <InputLayout
             title="Donation title"
@@ -32,7 +32,7 @@
             class="w-100"
         ></InputLayout>
 
-        <Button title="Continue" class="w-100"></Button>
+        <Button title="Continue" class="w-100" @click.native="addDonation"></Button>
     </div>
 </template>
 <script>
@@ -49,6 +49,25 @@
         },
         created() {
             eventBus.setPageTitle("Target donation")
+        },
+        data() {
+            return {
+                image: null
+            }
+        },
+        methods: {
+            setImage(newImage) {
+                this.image = newImage
+            },
+            addDonation() {
+                const donation = {
+
+                }
+
+                const image = this.image
+
+                this.$store.dispatch("uploadDonation", { image, donation })
+            }
         }
     }
 </script>
